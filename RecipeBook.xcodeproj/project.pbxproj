@@ -21,6 +21,7 @@
 		2349441C197E57AF00647655 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234943FE197E57AF00647655 /* UIKit.framework */; };
 		23494424197E57AF00647655 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23494422197E57AF00647655 /* InfoPlist.strings */; };
 		23494426197E57AF00647655 /* RecipeBookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23494425197E57AF00647655 /* RecipeBookTests.m */; };
+		23494431197E61C800647655 /* RecipeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23494430197E61C800647655 /* RecipeDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		23494421197E57AF00647655 /* RecipeBookTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RecipeBookTests-Info.plist"; sourceTree = "<group>"; };
 		23494423197E57AF00647655 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		23494425197E57AF00647655 /* RecipeBookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecipeBookTests.m; sourceTree = "<group>"; };
+		2349442F197E61C800647655 /* RecipeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeDetailViewController.h; sourceTree = "<group>"; };
+		23494430197E61C800647655 /* RecipeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 				23494410197E57AF00647655 /* RecipeBookViewController.m */,
 				23494412197E57AF00647655 /* Images.xcassets */,
 				23494401197E57AF00647655 /* Supporting Files */,
+				2349442F197E61C800647655 /* RecipeDetailViewController.h */,
+				23494430197E61C800647655 /* RecipeDetailViewController.m */,
 			);
 			path = RecipeBook;
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23494411197E57AF00647655 /* RecipeBookViewController.m in Sources */,
+				23494431197E61C800647655 /* RecipeDetailViewController.m in Sources */,
 				23494407197E57AF00647655 /* main.m in Sources */,
 				2349440B197E57AF00647655 /* RecipeBookAppDelegate.m in Sources */,
 			);

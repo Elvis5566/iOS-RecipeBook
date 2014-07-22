@@ -7,6 +7,7 @@
 //
 
 #import "RecipeBookViewController.h"
+#import "RecipeDetailViewController.h"
 
 @interface RecipeBookViewController ()
 
@@ -14,6 +15,7 @@
 
 @implementation RecipeBookViewController
     NSArray *recipes;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -44,6 +46,15 @@
     
     cell.textLabel.text = [recipes objectAtIndex:indexPath.row];
     return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showRecipeDetail"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        RecipeDetailViewController *destViewController = segue.destinationViewController;
+        NSLog(@"index: %d", indexPath.row);
+//        destViewController.recipeName = [recipes objectAtIndex:indexPath.row];
+    }
 }
 
 @end
