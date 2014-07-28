@@ -1,21 +1,19 @@
 //
-//  RecipeDetailViewController.m
+//  AboutViewController.m
 //  RecipeBook
 //
-//  Created by elvislee on 7/22/14.
+//  Created by elvislee on 7/28/14.
 //  Copyright (c) 2014 elvislee. All rights reserved.
 //
 
-#import "RecipeDetailViewController.h"
+#import "AboutViewController.h"
 
-@interface RecipeDetailViewController ()
+@interface AboutViewController ()
 
 @end
 
-@implementation RecipeDetailViewController
-@synthesize recipeLabel;
-//@synthesize recipeName;
-
+@implementation AboutViewController
+@synthesize webView;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -29,7 +27,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    recipeLabel.text = self.recipeName;
+    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"about.html" ofType:nil]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [webView loadRequest:request];
 }
 
 - (void)didReceiveMemoryWarning

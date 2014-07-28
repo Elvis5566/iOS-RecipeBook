@@ -53,7 +53,7 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         RecipeDetailViewController *destViewController = segue.destinationViewController;
         NSLog(@"index: %d", indexPath.row);
-//        destViewController.recipeName = [recipes objectAtIndex:indexPath.row];
+        destViewController.recipeName = [recipes objectAtIndex:indexPath.row];
     }
 }
 

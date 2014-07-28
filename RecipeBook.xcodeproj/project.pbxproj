@@ -22,6 +22,9 @@
 		23494424197E57AF00647655 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23494422197E57AF00647655 /* InfoPlist.strings */; };
 		23494426197E57AF00647655 /* RecipeBookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23494425197E57AF00647655 /* RecipeBookTests.m */; };
 		23494431197E61C800647655 /* RecipeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23494430197E61C800647655 /* RecipeDetailViewController.m */; };
+		235F85E7198637ED0075A598 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 235F85E6198637ED0075A598 /* AboutViewController.m */; };
+		235F85EA198638530075A598 /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = 235F85E8198638530075A598 /* about.html */; };
+		235F85EB198638530075A598 /* about.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 235F85E9198638530075A598 /* about.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,10 @@
 		23494425197E57AF00647655 /* RecipeBookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecipeBookTests.m; sourceTree = "<group>"; };
 		2349442F197E61C800647655 /* RecipeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeDetailViewController.h; sourceTree = "<group>"; };
 		23494430197E61C800647655 /* RecipeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeDetailViewController.m; sourceTree = "<group>"; };
+		235F85E5198637ED0075A598 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		235F85E6198637ED0075A598 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		235F85E8198638530075A598 /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = about.html; sourceTree = "<group>"; };
+		235F85E9198638530075A598 /* about.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = about.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,9 +122,13 @@
 		23494400197E57AF00647655 /* RecipeBook */ = {
 			isa = PBXGroup;
 			children = (
+				235F85E8198638530075A598 /* about.html */,
+				235F85E9198638530075A598 /* about.jpg */,
 				23494409197E57AF00647655 /* RecipeBookAppDelegate.h */,
 				2349440A197E57AF00647655 /* RecipeBookAppDelegate.m */,
 				2349440C197E57AF00647655 /* Main.storyboard */,
+				235F85E5198637ED0075A598 /* AboutViewController.h */,
+				235F85E6198637ED0075A598 /* AboutViewController.m */,
 				2349440F197E57AF00647655 /* RecipeBookViewController.h */,
 				23494410197E57AF00647655 /* RecipeBookViewController.m */,
 				23494412197E57AF00647655 /* Images.xcassets */,
@@ -234,6 +245,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				235F85EB198638530075A598 /* about.jpg in Resources */,
+				235F85EA198638530075A598 /* about.html in Resources */,
 				23494413197E57AF00647655 /* Images.xcassets in Resources */,
 				23494405197E57AF00647655 /* InfoPlist.strings in Resources */,
 				2349440E197E57AF00647655 /* Main.storyboard in Resources */,
@@ -256,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23494411197E57AF00647655 /* RecipeBookViewController.m in Sources */,
+				235F85E7198637ED0075A598 /* AboutViewController.m in Sources */,
 				23494431197E61C800647655 /* RecipeDetailViewController.m in Sources */,
 				23494407197E57AF00647655 /* main.m in Sources */,
 				2349440B197E57AF00647655 /* RecipeBookAppDelegate.m in Sources */,
@@ -463,6 +477,7 @@
 				2349442B197E57AF00647655 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2349442C197E57AF00647655 /* Build configuration list for PBXNativeTarget "RecipeBookTests" */ = {
 			isa = XCConfigurationList;
@@ -471,6 +486,7 @@
 				2349442E197E57AF00647655 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
