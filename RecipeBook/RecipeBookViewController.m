@@ -15,7 +15,7 @@
 
 @implementation RecipeBookViewController
     NSArray *recipes;
-
+    NSArray *searchResults;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -31,7 +31,11 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [recipes count];
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        return [searchResults count];
+    } else {
+        return [recipes count];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -44,7 +48,14 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    cell.textLabel.text = [recipes objectAtIndex:indexPath.row];
+    NSString *recipe = nil;
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        recipe = [searchResults objectAtIndex:indexPath.row];
+    } else {
+        recipe = [recipes objectAtIndex:indexPath.row];
+    }
+
+    cell.textLabel.text = recipe;
     return cell;
 }
 
@@ -55,6 +66,22 @@
         NSLog(@"index: %d", indexPath.row);
         destViewController.recipeName = [recipes objectAtIndex:indexPath.row];
     }
+}
+
+- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
+{
+    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"SELF contains[c] %@", searchText];
+    searchResults = [recipes filteredArrayUsingPredicate:resultPredicate];
+}
+
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    [self filterContentForSearchText:searchString
+                               scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
+                                      objectAtIndex:[self.searchDisplayController.searchBar
+                                                     selectedScopeButtonIndex]]];
+
+    return YES;
 }
 
 @end

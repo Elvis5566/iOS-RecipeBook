@@ -20,9 +20,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="4gH-SI-wKw">
+                                    <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="vXZ-lx-hvc" id="ogu-Tn-fyu"/>
+                                    </connections>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RecipeCell" id="HVg-eG-6mX">
-                                        <rect key="frame" x="0.0" y="119" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="163" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HVg-eG-6mX" id="J1m-6V-anC">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -43,10 +51,36 @@
                     </view>
                     <navigationItem key="navigationItem" title="Recipe book" id="fh4-hv-7N4"/>
                     <connections>
+                        <outlet property="searchDisplayController" destination="R3u-NA-tXb" id="Ude-Zs-mue"/>
                         <outlet property="tableView" destination="Vme-19-dYA" id="MAB-ne-gcO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="1TS-YE-S3T">
+                    <connections>
+                        <outlet property="delegate" destination="vXZ-lx-hvc" id="bBj-IX-Aqc"/>
+                        <outlet property="searchContentsController" destination="vXZ-lx-hvc" id="wSl-DT-GEf"/>
+                        <outlet property="searchResultsDataSource" destination="vXZ-lx-hvc" id="rah-rr-OBQ"/>
+                        <outlet property="searchResultsDelegate" destination="vXZ-lx-hvc" id="SbF-q1-lDv"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="TkK-bt-FqI">
+                    <connections>
+                        <outlet property="delegate" destination="vXZ-lx-hvc" id="m7h-h0-VW6"/>
+                        <outlet property="searchContentsController" destination="vXZ-lx-hvc" id="iDf-Kr-gYG"/>
+                        <outlet property="searchResultsDataSource" destination="vXZ-lx-hvc" id="c1y-ai-qi0"/>
+                        <outlet property="searchResultsDelegate" destination="vXZ-lx-hvc" id="Dwy-3k-hRj"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="R3u-NA-tXb">
+                    <connections>
+                        <outlet property="delegate" destination="vXZ-lx-hvc" id="4U2-c4-bW6"/>
+                        <outlet property="searchBar" destination="4gH-SI-wKw" id="ZTE-a9-4pJ"/>
+                        <outlet property="searchContentsController" destination="vXZ-lx-hvc" id="WmE-AO-0f4"/>
+                        <outlet property="searchResultsDataSource" destination="vXZ-lx-hvc" id="QhS-Fs-r8f"/>
+                        <outlet property="searchResultsDelegate" destination="vXZ-lx-hvc" id="WFL-1a-5az"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1410" y="138"/>
         </scene>
